@@ -14,7 +14,8 @@ def jpx_download():
     xls_path = match.group(1)
     xls_url = urllib.parse.urljoin(URL, xls_path)
 
-    df = pandas.read_excel(xls_url, header=0)
+    urllib.request.urlretrieve(xls_url, "data_j.xls")
+    df = pandas.read_excel("data_j.xls", header=0)
 
     df = df[["コード", "銘柄名", "市場・商品区分"]]
     df = df.rename(

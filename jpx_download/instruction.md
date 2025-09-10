@@ -7,7 +7,7 @@ https://www.jpx.co.jp/markets/statistics-equities/misc/01.html
 data_j.xls ファイルのリンクを抽出する。
 
 2. data_j.xls ファイルをダウンロードする。
-3. data_j.xls ファイルを変換し、jpx_data.csv ファイルに保存する。
+3. data_j.xls ファイルを変換し jpx_data.csv ファイルに保存する。
 
 # 出力
 ファイル名 jpx_data.csv
