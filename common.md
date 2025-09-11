@@ -12,3 +12,8 @@ pandas
 uvを使う。
 uv run script.py
 のように実行せよ。
+
+# モジュール名
+短縮名を使用しない。
+(適切な例) import pandas
+(不適切な例) import pandas as pd
