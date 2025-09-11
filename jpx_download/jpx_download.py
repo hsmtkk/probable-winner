@@ -27,6 +27,17 @@ def jpx_download():
     )
     df = df.dropna(subset=["銘柄コード"])
 
+    # "市場区分" が以下のレコードのみを残す
+    # プライム（内国株式）
+    # スタンダード（内国株式）
+    # グロース（内国株式）
+    market_segments_to_keep = [
+        "プライム（内国株式）",
+        "スタンダード（内国株式）",
+        "グロース（内国株式）",
+    ]
+    df = df[df["市場区分"].isin(market_segments_to_keep)]
+
     df.to_csv("jpx_data.csv", index=False, encoding="utf-8")
 
 
